@@ -24,7 +24,6 @@ a {
 }
 
 img {
-  width: 100%;
   object-fit: cover;
   height: auto;
 }
@@ -32,11 +31,16 @@ img {
 @font-face {
   font-family: fraunces;
   src: url(./assets/fonts/fraunces/static/Fraunces_144pt-SemiBold.ttf);
+
+  font-style: normal;
+  font-display: swap;
 }
 
 @font-face {
   font-family: manrope;
   src: url(./assets/fonts/manrope/Manrope-VariableFont_wght.ttf);
+  font-style: normal;
+  font-display: swap;
 }
 
 /* Custom Classes */
@@ -142,9 +146,6 @@ img {
   position: absolute;
   left: 0;
   bottom: 0.25rem;
-}
-body {
-  min-height: 300vh;
 }
 
 main {

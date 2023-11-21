@@ -29,8 +29,6 @@
   align-items: center;
 }
 .logo {
-  width: 5.98513rem;
-  height: 1.538rem;
   flex-shrink: 0;
 }
 
@@ -47,11 +45,9 @@
 }
 
 .hero-img {
-  width: 100%;
-  max-width: 48rem;
   position: absolute;
   left: calc(50% + 2.525rem);
-  bottom: -26rem;
+  bottom: -28rem;
   transform: translateX(-50%);
 }
 .bg-pattern {
