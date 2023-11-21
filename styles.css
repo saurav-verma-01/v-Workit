@@ -1,0 +1,196 @@
+:root {
+  /* Color */
+  --dark-purple: #24053e;
+  --eucaplyptus: #44ffa1;
+  --gray: #584d62;
+  --ghost-white: #fcf8ff;
+  --white: #ffffff;
+}
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+  border: none;
+  outline: none;
+  display: inline-block;
+}
+
+img {
+  width: 100%;
+  object-fit: cover;
+  height: auto;
+}
+
+@font-face {
+  font-family: fraunces;
+  src: url(./assets/fonts/fraunces/static/Fraunces_144pt-SemiBold.ttf);
+}
+
+@font-face {
+  font-family: manrope;
+  src: url(./assets/fonts/manrope/Manrope-VariableFont_wght.ttf);
+}
+
+/* Custom Classes */
+
+/* Typography */
+.heading-primary,
+.heading-secondary,
+.heading-tertiary {
+  font-family: fraunces;
+  font-weight: 600;
+}
+.heading-primary {
+  font-size: 5rem;
+  line-height: 1;
+}
+.heading-secondary {
+  font-size: 3.5rem;
+  line-height: 1.143;
+}
+.heading-tertiary {
+  font-size: 2rem;
+  line-height: 1.25;
+}
+.body-text {
+  font-family: manrope;
+  font-size: 1.125rem;
+  font-weight: 400;
+  line-height: 1.778;
+  color: var(--gray);
+}
+
+/* reusable components */
+
+.btn-container {
+  background-color: var(--dark-purple);
+  height: 10rem;
+}
+
+.btn {
+  font-family: Manrope;
+  font-size: 1.125rem;
+  font-weight: 700;
+  line-height: 1.778;
+  letter-spacing: -0.01125rem;
+  width: 11.875rem;
+  height: 3.8125rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid transparent;
+  cursor: pointer;
+  transition: all 0.5s ease;
+}
+
+.btn.btn-primary {
+  background-color: var(--eucaplyptus);
+  color: var(--dark-purple);
+}
+
+.btn.btn-primary:is(:hover, :focus) {
+  border-color: var(--eucaplyptus);
+  color: var(--eucaplyptus);
+  background-color: transparent;
+}
+
+.btn.btn-secondary {
+  background-color: transparent;
+  color: var(--white);
+  position: relative;
+}
+.btn.btn-secondary::after {
+  content: "";
+  height: 0.1875rem;
+  background-color: var(--eucaplyptus);
+  position: absolute;
+  bottom: 0.5rem;
+  left: 0;
+  width: 100%;
+  transform: scale(0.8);
+}
+
+.btn.btn-secondary:is(:hover, :focus) {
+  color: var(--eucaplyptus);
+}
+
+/* reusable classes */
+.container {
+  padding-inline: 2.5rem;
+  width: 100%;
+  max-width: calc(70rem + 2.5rem);
+  margin-inline: auto;
+  position: relative;
+}
+
+.underline {
+  position: relative;
+}
+.underline::after {
+  content: "";
+  width: 100%;
+  height: 0.1875rem;
+  background-color: var(--eucaplyptus);
+  position: absolute;
+  left: 0;
+  bottom: 0.25rem;
+}
+body {
+  min-height: 300vh;
+}
+
+main {
+  width: 100%;
+  overflow-x: hidden;
+}
+
+@media screen and (max-width: 960px) {
+  .container {
+    max-width: calc(43.125rem + 2.5rem);
+  }
+  .heading-primary {
+    font-size: 3.75rem;
+  }
+  .btn {
+    font-size: 1rem;
+    line-height: 2;
+    letter-spacing: -0.01rem;
+  }
+  .btn.btn-secondary::after {
+    transform: scale(0.7);
+    bottom: 0.55rem;
+  }
+  .heading-tertiary {
+    font-size: 1.75rem;
+    line-height: 1.285;
+  }
+  .body-text {
+    font-size: 1rem;
+    line-height: 1.75;
+  }
+  .heading-secondary {
+    font-size: 3rem;
+    line-height: 1.1667;
+  }
+}
+@media screen and (max-width: 620px) {
+  .container {
+    max-width: 100%;
+    padding-inline: 1rem 0;
+  }
+  .heading-primary {
+    font-size: 3.125rem;
+  }
+  .heading-secondary {
+    font-size: 2rem;
+    line-height: 1.5;
+  }
+}
